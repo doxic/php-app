@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Hello, World!</title>
-</head>
-<body>
-<?php
-if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-    $ip = $_SERVER['HTTP_CLIENT_IP'];
-} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-} else {
-    $ip = $_SERVER['REMOTE_ADDR'];
-}
-echo "Hello " . $ip . "!";
-?>
-</body>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Hello World!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <h1>Hello World</h1>
+        <p>Running on the host &ldquo;<?php echo gethostname(); ?>&rdquo;</p>
+        <p>PHP version <?php echo phpversion(); ?></p>
+    </body>
+
 </html>
